@@ -6,6 +6,8 @@ The main purpose for this project is to work as an debugger for AutoIt and run s
 ## Notice:
 :warning: This project is currently in the planning stage.
 
+:warning: This project will not be able exit planning stage, until [Alut](https://github.com/genius257/Ault) supports current AuotIt3.
+
 Feature requests are welcome as issues.
 
 ### Planned Features:
