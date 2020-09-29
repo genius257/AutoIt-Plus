@@ -1,0 +1,17 @@
+#cs
+# This is just like AutoIt3's current alpha maps, with the exception it uses curly brackets instad of the square brackets that a normal array already uses.
+# So "$a = []" Will give an empty array, instead of a map
+#ce
+
+
+$map = {}
+$map['a'] = 'A'
+$map['b'] = 'B'
+$map['c'] = 'C'
+$map[0] = '0'
+
+MsgBox(0, "a", $map['a'])
+MsgBox(0, "b", $map['b'])
+MsgBox(0, "c", $map['c'])
+MsgBox(0, "0", $map[0])
+MsgBox(0, "A", $map['A']) ; Error: undefined index "A"
