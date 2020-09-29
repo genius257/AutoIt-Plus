@@ -1,0 +1,73 @@
+Trait HasEvents
+  Protected $eventMap
+  
+  #cs
+  # Fire named event
+  # @param string $event The event name
+  # @returns bool The event success response
+  #ce
+  Public Func fireEvent($event) : bool
+    ;
+  EndFunc
+  
+  #cs
+  # register named event listner
+  # @param string $event The event name
+  # @param mixed $callable A callable to invoke on event
+  # @returns bool success indicator
+  #ce
+  Public Func listenEvent($event, $callable) : bool
+    ;
+  EndFunc
+  
+  #cs
+  # removes registered named event listner
+  # @param string $event The event name
+  # @param mixed $callable A callable to match and remove. Default is all callables on the named event
+  # @returns bool success indicator
+  #ce
+  Public Func forgetEvent($name, $callable = Default) : bool
+    ;
+  EndFunc
+EndTrait
+
+Interface ArrayAccess
+  Abstract Public Func offsetExists ( mixed $offset ) : bool
+  Abstract Public Func offsetGet ( mixed $offset ) : mixed
+  Abstract Public Func offsetSet ( mixed $offset , mixed $value ) : void
+  Abstract Public Func offsetUnset ( mixed $offset ) : void
+EndInterface
+
+Interface Stringable
+  Abstract Public Func __toString() : string
+EndInterface
+
+Class List implements ArrayAccess
+  Protected $items[0] ;Empty array
+
+  Public Func offsetExists($offset)
+    Return IsInt($offset) ? Ubound($this.items, 1) > $offset : False
+  EndFunc
+  
+  Public Func offsetGet($offset)
+    Return $this.items[$offset]
+  EndFunc
+  
+  Public Func offsetSet($offset, $value)
+    If Ubound($this.items, 1) <= $offset Then ReDim $this.items[$offset + 1]
+    $this.items[$offset] = $value
+    Return $value
+  EndFunc
+  
+  Public Func offsetUnset($offset)
+    $this.items[$offset] = Null
+  EndFunc
+EndClass
+
+Class MyList extends List Implements Stringable
+  Use HasEvents
+
+  Public Func __toString()
+    Return "[" & _ArrayToString($this.items, ", ") & "]"
+  EndFunc
+EndClass
