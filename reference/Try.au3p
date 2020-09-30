@@ -5,6 +5,7 @@ Catch BadFunctionCallException $e
 Catch Exception $e
   ; Any exception not instance of BadFunctionCallException will goto here
   ConsoleWrite($e.getMessage()) 
-Finally
+Finally $e
+  ; $e contains the exception, or null if no exception occurred
   ConsoleWrite(@CRLF)
 EndTry
