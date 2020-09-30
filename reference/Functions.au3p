@@ -1,0 +1,26 @@
+$add = Func ($a, $b)
+ Return $a + $b
+EndFunc
+
+Func Nested($f)
+  Func Private()
+    Return 'something'
+  EndFunc
+
+  $private = Func ()
+    Return 'else'
+  EndFunc
+
+  Return Private() & $private() & $f(1, 2)
+EndFunc
+
+Nested($add)
+
+;writes test every third second
+AdlibRegister(() => ConsoleWriteLine('test'), 3000)
+
+$zero = () => 123
+$one = $a => $a + 1
+$two = ($a, $b) => $a + $b
+
+$two($one($zero()), 123) ; 247
