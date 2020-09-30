@@ -7,6 +7,9 @@ FunctionExists("test")
 ; Like php's var_dump, for better debugging
 VarDump($value)
 
+; Like php's func_get_args for dynamic functions
+funcGetArgs()
+
 ; No current way in AutoIt to set by reference, besides in function parameters.
 ; This feature is aimed at fixing that.
 $a = 1
