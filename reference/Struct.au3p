@@ -1,0 +1,24 @@
+$structure1 = "ptr;int"
+$structure2 = "int;STRUCT $structure1 structure1;int"
+
+$tStructure2 DllStructCreate($structure2)
+$tStructure1 = $tStructure2.structure1
+
+DllStructGetData($structure2, 2) ; DllStruct($structure1)
+DllStructGetData($structure1, 2) ; Int(0)
+
+; OR ---------------------------------------------------
+
+Struct structure1
+  ptr a
+  name b
+EndStruct
+
+Struct structure2
+  int a
+  structure1 b
+  int c
+EndStruct
+
+$tStructure2 = DllStructCreate("structure2")
+$tStructure2.b.a ; Int(0) from structure1 within structure2
