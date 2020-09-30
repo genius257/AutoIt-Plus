@@ -1,6 +1,9 @@
 ; The LONG missing function in AutoIt3. simply appending a newline to the end of the content, before writing to the console.
 ConsoleWriteLine("test") ; "test\n"
 
+; To use in like php, where a function can be defined if it does not exist, to prevent errors or function already defined.
+FunctionExists("test")
+
 ; The current line number of the file. 
 @Line
 
