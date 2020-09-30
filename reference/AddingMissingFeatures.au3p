@@ -1,0 +1,28 @@
+; The LONG missing function in AutoIt3. simply appending a newline to the end of the content, before writing to the console.
+ConsoleWriteLine("test") ; "test\n"
+
+; The current line number of the file. 
+@Line
+
+; The full path and filename of the file with symlinks resolved. If used inside an include, the name of the included file is returned.
+@File
+
+; The directory of the file. If used inside an include, the directory of the included file is returned.
+; This directory name does not have a trailing slash unless it is the root directory.
+@Dir
+
+; The function name, or {closure} for anonymous functions.
+@Function
+
+; The class name. The class name includes the namespace it was declared in (e.g. Foo\Bar).
+; When used in a trait method, @Class is the name of the class the trait is used in.
+@Class
+
+; The trait name. The trait name includes the namespace it was declared in (e.g. Foo\Bar).
+@Trait
+
+; The class method name.
+@Method
+
+; The name of the current namespace.
+@Namespace
