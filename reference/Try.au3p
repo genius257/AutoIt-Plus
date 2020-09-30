@@ -1,0 +1,10 @@
+Try
+  undefinedFunc()
+Catch BadFunctionCallException $e
+  ConsoleWrite($e.getMessage()) ;Undefined function "undefinedFunc"
+Catch Exception $e
+  ; Any exception not instance of BadFunctionCallException will goto here
+  ConsoleWrite($e.getMessage()) 
+Finally
+  ConsoleWrite(@CRLF)
+EndTry
