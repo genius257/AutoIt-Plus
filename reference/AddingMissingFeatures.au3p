@@ -4,6 +4,15 @@ ConsoleWriteLine("test") ; "test\n"
 ; To use in like php, where a function can be defined if it does not exist, to prevent errors or function already defined.
 FunctionExists("test")
 
+; Like php's var_dump, for better debugging
+VarDump($value)
+
+; No current way in AutoIt to set by reference, besides in function parameters.
+; This feature is aimed at fixing that.
+$a = 1
+$b = Byref $a
+$b = 2 ; now $a is also 2
+
 ; The current line number of the file. 
 @Line
 
