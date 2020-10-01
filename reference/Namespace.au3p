@@ -1,0 +1,8 @@
+#include "App\Models\User.au3p"
+
+Namespace App
+
+Use App\Models\User
+
+; an instance of \App\Models\User
+$user = User()
