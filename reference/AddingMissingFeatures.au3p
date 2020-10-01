@@ -16,6 +16,9 @@ $a = 1
 $b = Byref $a
 $b = 2 ; now $a is also 2
 
+; being able to get the return value from a script
+$result = #include "otherScript.au3p"
+
 ; The current line number of the file. 
 @Line
 
