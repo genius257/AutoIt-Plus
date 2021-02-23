@@ -5,3 +5,5 @@ Array with a dynamic size, so they COULD work like normally, if a size is define
 internally we allocate more, indices and increment if we run out.
 
 This may be difficult with multi dimention arrays.
+
+one implementaion idea: https://medium.com/techspace-usict/how-pythons-list-works-so-dynamically-and-efficiently-amortized-analysis-ee5ea00643fc
