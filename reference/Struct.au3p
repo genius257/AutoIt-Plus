@@ -9,16 +9,20 @@ DllStructGetData($structure1, 2) ; Int(0)
 
 ; OR ---------------------------------------------------
 
-Struct structure1
+Struct Structure1
   ptr a
   name b
 EndStruct
 
-Struct structure2
+Struct Structure2
   int a
-  structure1 b
+  Structure1 b
   int c
 EndStruct
 
-$tStructure2 = DllStructCreate("structure2")
+$tStructure2 Structure2
 $tStructure2.b.a ; Int(0) from structure1 within structure2
+
+$pStructure1 = ...; Getting a PTR from somewhere
+$tStructure1 = $pStructure1 AS Structure1
+$tStructure1.a
