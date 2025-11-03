@@ -71,3 +71,5 @@ Class MyList extends List Implements Stringable
     Return "[" & _ArrayToString($this.items, ", ") & "]"
   EndFunc
 EndClass
+
+$oMyList = New MyList()
