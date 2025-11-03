@@ -1,3 +1,92 @@
+## Assignment operators
+
+`$x = 1` assigns a value to a variable
+
+`$ ??= 1` assigns a value to a variable, if the variable is null
+
+## Arithmetic operators
+
+`1 + 1`
+
+`1 - 1`
+
+`2 * 2`
+
+`3 / 2`
+
+`3 % 2`
+
+## Compound assignment
+
+`$x += 1`
+
+`$x -= 1`
+
+`$x *= 2`
+
+`$x /= 2`
+
+`$x %= 2`
+
+`$x >>= 2`
+
+`$x <<= 2`
+
+`$x &= "b"`
+
+## Increment and decrement
+
+`++$x`
+
+`--$x`
+
+`$x++`
+
+`$x--`
+
+## Relational and comparison operators
+
+`==`
+
+`!=`
+
+`<`
+
+`>`
+
+`<=`
+
+`>=`
+
+## Logical operators
+
+`!`
+
+`Not`
+
+`And`
+
+`Or`
+
+## Conditional ternary operator
+
+`condition ? result1 : result2`
+
+## Bitwise operators
+
+`&&` Bitwise AND
+
+`||` Bitwise inclusive OR
+
+`^^` Bitwise exclusive OR
+
+`~~` Unary complement (bit inversion)
+
+`<<` Shift bits left
+
+`>>` Shift bits right
+
+<!--
 ## Comparison Operators
 
 __=__ assignment __always__
@@ -35,3 +124,4 @@ __!__ Not
 ## Conditional Assignment Operators
 
 __??__ Null coalescing
+-->
