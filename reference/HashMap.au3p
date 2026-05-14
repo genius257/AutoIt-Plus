@@ -15,3 +15,9 @@ MsgBox(0, "b", $map['b'])
 MsgBox(0, "c", $map['c'])
 MsgBox(0, "0", $map[0])
 MsgBox(0, "A", $map['A']) ; Error: undefined index "A"
+
+#cs
+# It should also be allowed, to set inital values when declaring the map:
+#ce
+
+$map = {'a': 'A', 'b': 'B', 'c': 'C', 0: '0'}
